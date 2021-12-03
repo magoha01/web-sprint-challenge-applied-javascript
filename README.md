@@ -35,9 +35,9 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 **Steps Required for MVP:**
 
-- [ ] Steps 1 and 2 are explained inside the `src/components/header.js` file.
-- [ ] Steps 3 and 4 are explained inside the `src/components/tabs.js` file.
-- [ ] Steps 5 and 6 are explained inside the `src/components/card.js` file.
+- [X] Steps 1 and 2 are explained inside the `src/components/header.js` file.
+- [X] Steps 3 and 4 are explained inside the `src/components/tabs.js` file.
+- [X] Steps 5 and 6 are explained inside the `src/components/card.js` file.
 
 **Important Notes:**
 
@@ -50,17 +50,27 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 ## Submission format
 
-- [ ] Submit via Codegrade by committing and pushing any new changes to the *main* branch.
-- [ ] Check Codegrade for automated feedback.
-- [ ] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
-- [ ] Any changes pushed after the deadline will not receive any feedback.
+- [X] Submit via Codegrade by committing and pushing any new changes to the *main* branch.
+- [X] Check Codegrade for automated feedback.
+- [X] Check Codegrade in the days following the Sprint Challenge for reviewer feedback.
+- [X] Any changes pushed after the deadline will not receive any feedback.
 
 ## Interview Questions
 
 Demonstrate your understanding of this week's concepts by answering the following questions:
 
 1. What is the DOM?
+
+    DOM stands for document object model. it is an object that represents the html elements of a webpage, with a tree-like struture that represents the content, structure, and style of the page. We are able to manipulate the dom by targeting its nodes in order to manipulate individual elements in the DOM.
+
 2. What is an event?
+        An event can be described as pretty much any type user interaction detected within the browser( ex click, moving the mouse over an element, pressing down a key on the keyboard, etc).
+
 3. What is an event listener?
+    an event listener is a function that targets specific input from the user. Event listeners fire off at the moment said user interaction occurs, triggering the function attached to that listener(for example, An event listener could be added to the home button of a web page in which whenever the user clicks the home button, they return to the home page).
+
 4. Why would we convert a NodeList into an Array?
+    We would convert a nodeList into an array because otherwise we are unable to iterate over it using array methods, as a nodeList is a browser API, while an array is a javascript API.
+
 5. What is a component?
+    A Component is a standalone reusable piece of code in javascript used to create and style new html elements.

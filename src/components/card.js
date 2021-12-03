@@ -42,6 +42,7 @@ const Card = (article) => {
   authorName.textContent = article["authorName"]
 
   cardDiv.addEventListener('click', () => {
+    console.log(headline)
   });
   return cardDiv;
 }
@@ -60,14 +61,14 @@ const cardAppender = (selector) => {
   axios.get(`http://localhost:5000/api/articles`)
   .then(resp =>{
     const getArticles = resp.data.articles
-    console.log(getArticles)
     const jsArticles = getArticles.javascript
     const bootstrapArticles = getArticles.bootstrap
     const technologyArticles = getArticles.technology
     const jqueryArticles = getArticles.jquery
     const nodeArticles = getArticles.node
     const cardContainer = document.querySelector(selector)
-     
+  
+  
     jsArticles.forEach(article => {
   
       const newArticle = Card(article)
