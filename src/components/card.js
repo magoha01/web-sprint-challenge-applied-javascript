@@ -42,7 +42,6 @@ const Card = (article) => {
   authorName.textContent = article["authorName"]
 
   cardDiv.addEventListener('click', () => {
-    console.log(headLine)
   });
   return cardDiv;
 }
@@ -60,12 +59,51 @@ const cardAppender = (selector) => {
 
   axios.get(`http://localhost:5000/api/articles`)
   .then(resp =>{
-    const getArticles = articles.subject.data
+    const getArticles = resp.data.articles
+    console.log(getArticles)
+    const jsArticles = getArticles.javascript
+    const bootstrapArticles = getArticles.bootstrap
+    const technologyArticles = getArticles.technology
+    const jqueryArticles = getArticles.jquery
+    const nodeArticles = getArticles.node
+    const cardContainer = document.querySelector(selector)
+     
+    jsArticles.forEach(article => {
+  
+      const newArticle = Card(article)
+      cardContainer.appendChild(newArticle)
+    })
+  
+    bootstrapArticles.forEach(article => {
+  
+      const newArticle = Card(article)
+      cardContainer.appendChild(newArticle)
+
+    })
+
+    technologyArticles.forEach(article => {
+  
+      const newArticle = Card(article)
+      cardContainer.appendChild(newArticle)
+
+    })
+
+    jqueryArticles.forEach(article => {
+  
+      const newArticle = Card(article)
+      cardContainer.appendChild(newArticle)
+
+    })
+
+    nodeArticles.forEach(article => {
+  
+      const newArticle = Card(article)
+      cardContainer.appendChild(newArticle)
+    })
+
   }).catch(error => {
     console.error(error);
 });
-
-
 
 }
 
